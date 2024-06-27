@@ -1,5 +1,6 @@
-import { mixins } from "@/styles/mixins.ts";
 import { styled } from "styled-components";
+
+import { mixins } from "@/styles/mixins.ts";
 
 export const Hero = styled.section`
   position: relative;

@@ -1,7 +1,9 @@
+import { createBrowserRouter } from "react-router-dom";
+
 import App from "@/App.tsx";
 import { Checkout } from "@/pages/Checkout/Checkout.tsx";
 import { Success } from "@/pages/Success/Success.tsx";
-import { createBrowserRouter } from "react-router-dom";
+
 import { Home } from "./pages/Home/Home.tsx";
 
 export const router = createBrowserRouter([
@@ -11,16 +13,16 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Home />,
+				element: <Home />
 			},
 			{
 				path: "/checkout",
-				element: <Checkout />,
+				element: <Checkout />
 			},
 			{
 				path: "/order/:orderId/success",
-				element: <Success />,
-			},
-		],
-	},
+				element: <Success />
+			}
+		]
+	}
 ]);

@@ -1,7 +1,8 @@
+import { produce } from "immer";
+
 import type { Item } from "@/interfaces/Item.ts";
 import type { Order } from "@/interfaces/Order.ts";
-import { ActionTypes, type Actions } from "@/reducers/cart/actions.ts";
-import { produce } from "immer";
+import { type Actions,ActionTypes } from "@/reducers/cart/actions.ts";
 
 interface CartState {
 	cartItems: Item[];

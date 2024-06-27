@@ -1,6 +1,7 @@
+import type { NavigateFunction } from 'react-router-dom'
+
 import type { Item } from '@/interfaces/Item'
 import type { Order } from '@/interfaces/Order'
-import type { NavigateFunction } from 'react-router-dom'
 
 export enum ActionTypes {
   ADD_ITEM = 'ADD_ITEM',

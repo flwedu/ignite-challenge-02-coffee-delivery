@@ -1,3 +1,11 @@
+import {
+	createContext,
+	type PropsWithChildren,
+	useCallback,
+	useReducer,
+} from "react";
+import { useNavigate } from "react-router-dom";
+
 import type { Item } from "@/interfaces/Item.ts";
 import type { Order } from "@/interfaces/Order.ts";
 import {
@@ -8,13 +16,6 @@ import {
 	removeItemAction,
 } from "@/reducers/cart/actions.ts";
 import { shoppingCartReducer } from "@/reducers/cart/reducer.ts";
-import {
-	type PropsWithChildren,
-	createContext,
-	useCallback,
-	useReducer,
-} from "react";
-import { useNavigate } from "react-router-dom";
 
 interface ShoppingCartContextType {
 	addItem: (item: Item) => void;

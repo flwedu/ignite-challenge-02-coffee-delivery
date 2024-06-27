@@ -1,4 +1,5 @@
 import "styled-components";
+
 import type { defaultTheme } from "./themes/default.ts";
 
 type DefaultThemeType = typeof defaultTheme;

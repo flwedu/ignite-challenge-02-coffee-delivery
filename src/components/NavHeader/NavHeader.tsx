@@ -1,5 +1,6 @@
 import { MapPin, ShoppingCart } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
+
 import { Aside, Container } from "./styles.ts";
 
 export function NavHeader() {
