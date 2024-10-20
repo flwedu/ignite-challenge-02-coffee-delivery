@@ -1,5 +1,4 @@
 import type { CoffeeInfo } from "@/interfaces/CoffeInfo.ts";
-
 import { CoffeeCard } from "../CoffeeCard/CoffeeCard.tsx";
 import { StyledGrid } from "./styles.ts";
 

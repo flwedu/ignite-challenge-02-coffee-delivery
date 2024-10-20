@@ -1,9 +1,7 @@
+import type { defaultTheme } from "@/themes/default.ts";
 import { Coffee, Package, ShoppingCart, Timer } from "@phosphor-icons/react";
 import { useCallback } from "react";
 import { useTheme } from "styled-components";
-
-import type { defaultTheme } from "@/themes/default.ts";
-
 import { Heading, Hero, HeroContent, Info } from "./styles.ts";
 
 const createIconPropsGetter =

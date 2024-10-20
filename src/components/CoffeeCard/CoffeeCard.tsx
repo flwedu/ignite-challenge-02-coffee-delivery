@@ -1,11 +1,18 @@
+import { QuantityInput } from "@/components/Form";
+import type { CoffeeInfo } from "@/interfaces/CoffeInfo.ts";
 import { CheckFat, ShoppingCart } from "@phosphor-icons/react";
 import { useState } from "react";
 import { useTheme } from "styled-components";
-
-import type { CoffeeInfo } from "@/interfaces/CoffeInfo.ts";
-
-import { QuantityInput } from "../Form/QuantityInput/QuantityInput.tsx";
-import { CoffeeImg, Container, Control, Description, Order, Price, Tags, Title } from "./styles.ts";
+import {
+	CoffeeImg,
+	Container,
+	Control,
+	Description,
+	Order,
+	Price,
+	Tags,
+	Title,
+} from "./styles.ts";
 
 type CoffeeCardProps = {
 	coffee: CoffeeInfo;
@@ -39,30 +46,24 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 	return (
 		<Container>
 			<CoffeeImg src={coffee.imgSrc} alt={coffee.title} />
-
 			<Tags>
 				{coffee.tags.map((tag) => (
 					<span key={tag}>{tag}</span>
 				))}
 			</Tags>
-
 			<Title>{coffee.title}</Title>
-
 			<Description>{coffee.description}</Description>
-
 			<Control>
 				<Price>
 					<span>R$</span>
 					<span>{coffee.price.toFixed(2)}</span>
 				</Price>
-
 				<Order $itemAdded={isItemAdded}>
 					<QuantityInput
 						quantity={quantity}
 						incrementQuantity={incrementQuantity}
 						decrementQuantity={decrementQuantity}
 					/>
-
 					<button type="button" disabled={isItemAdded} onClick={handleAddItem}>
 						{isItemAdded ? (
 							<CheckFat

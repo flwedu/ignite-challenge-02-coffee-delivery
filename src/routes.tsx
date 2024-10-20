@@ -13,16 +13,16 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Home />
+				element: <Home />,
 			},
 			{
 				path: "/checkout",
-				element: <Checkout />
+				element: <Checkout />,
 			},
 			{
 				path: "/order/:orderId/success",
-				element: <Success />
-			}
-		]
-	}
+				element: <Success />,
+			},
+		],
+	},
 ]);
