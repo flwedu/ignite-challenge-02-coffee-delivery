@@ -1,7 +1,7 @@
 export interface CoffeeInfo {
 	id: string;
 	description: string;
-	imgSrc: string;
+	image: string;
 	price: number;
 	tags: string[];
 	title: string;

@@ -1,12 +1,18 @@
-import type { CoffeeInfo } from "@/interfaces/CoffeInfo.ts";
+import { useCoffeesQuery } from "@/hooks/useCoffeesQuery.ts";
 import { CoffeeCard } from "../CoffeeCard/CoffeeCard.tsx";
 import { StyledGrid } from "./styles.ts";
 
-interface CoffeeCardsListProps {
-	data: CoffeeInfo[];
-}
+export function CoffeeCardsList() {
+	const { data, status } = useCoffeesQuery();
 
-export function CoffeeCardsList({ data }: CoffeeCardsListProps) {
+	if (status === "pending") {
+		return <p>Carregando...</p>;
+	}
+
+	if (status === "error") {
+		return <p>Ocorreu um erro ao carregar lista de cafés</p>;
+	}
+
 	return (
 		<StyledGrid>
 			{data.map((item) => {
